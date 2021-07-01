@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册页面</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            border: 0px;
+        }
+        
+        .body {
+            font-size: 16px;
+            font-family: "微软雅黑";
+            background: url(C:\Users\王天扬\Pictures\preview.jpg) no-repeat center center fixed;
+            background-size: cover;
+        }
+        
+        .register {
+            width: 900px;
+            height: 400px;
+            margin-top: 50px;
+            margin-left: 400px;
+        }
+        
+        h2 {
+            color: rgb(194, 73, 78);
+            margin: 20px 0 20px 240px;
+        }
+        
+        p {
+            margin-top: 30px;
+        }
+        
+        p span {
+            width: 150px;
+            margin-top: 3px;
+            display: inline-block;
+            text-align: right;
+            padding-right: 12px;
+        }
+        
+        p input:not(.radio) {
+            width: 220px;
+            height: 40px;
+            border: 1px soild #38a1bf;
+            padding: 5px 8px;
+        }
+        
+        .radio {
+            margin-left: 20px;
+        }
+        
+        #btn input {
+            width: 160px;
+            height: 40px;
+            background: rgb(9, 101, 90);
+            margin-top: 20px;
+            margin-left: 200px;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #fff;
+            letter-spacing: 2px;
+        }
+        
+        .usually {
+            background: #fff url(C:\Users\王天扬\Desktop\img\attention.png) no-repeat 98% center;
+        }
+        
+        .usually:required:valid {
+            background: #fff url(C:\Users\王天扬\Desktop\img\right.png) no-repeat 98% center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="register">
+        <form action="#">
+            <h2>会员注册</h2>
+            <p>
+                <span>用户名:</span>
+                <input type="text" required pattern="^[a-zA-Z][a-zA-z0-9_]{4,15}$" class="usually">(字母开头，长度为5~16位，允许字母、数字、特殊符号)
+            </p>
+            <p>
+                <span>密码:</span>
+                <input type="text" required pattern="^[a-zA-Z]\w{5,17}$" class="usually">(字母开头，长度为6~18位，允许字母、数字、特殊符号)
+            </p>
+            <p>
+                <span>性别:</span>
+                <input type="radio" name="sex" id="male" class="radio" checked>
+                <label for="male">男</label>
+                <input type="radio" name="sex" id="female" class="radio">
+                <label for="male">女</label>
+            </p>
+            <p>
+                <span>Email地址:</span>
+                <input type="email" required class="usually">
+            </p>
+            <p>
+                <span>出生年月:</span>
+                <input type="birth" type="date">
+            </p>
+            <p id="btn">
+                <input type="submit" value="注册会员">
+            </p>
+        </form>
+    </div>
+
+</body>
+
+</html>
